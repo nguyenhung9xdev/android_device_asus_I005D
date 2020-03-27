@@ -33,5 +33,8 @@ TARGET_KERNEL_CONFIG := vendor/rog3_defconfig
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
 # inherit from the proprietary version
 -include vendor/asus/rog3/BoardConfigVendor.mk
