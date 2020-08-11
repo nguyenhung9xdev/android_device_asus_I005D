@@ -1,20 +1,8 @@
 [
   {
     "remote": "omnirom",
-    "repository": "android_device_qcom_caf-sepolicy",
-    "target_path": "device/qcom/sepolicy",
+    "repository": "android_device_asus_sm8250-common",
+    "target_path": "device/asus/sm8250-common"
     "revision": "android-10"
-  },
-  {
-    "remote": "github",
-    "repository": "android_kernel_asus_rog2",
-    "target_path": "kernel/asus/rog2",
-    "revision": "android-10"
-  },
-  {
-     "remote": "omnirom",
-     "repository": "android_vendor_qcom_opensource_fm-commonsys",
-     "target_path": "vendor/qcom/opensource/fm-commonsys",
-     "revision": "android-10"
-   }
+  }
 ]

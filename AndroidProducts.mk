@@ -1,8 +1,9 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device.mk \
-    $(LOCAL_DIR)/omni_rog2.mk
+    $(LOCAL_DIR)/omni_rog3.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_rog2-user \
-    omni_rog2-userdebug \
-    omni_rog2-eng
+    omni_rog3-user \
+    omni_rog3-userdebug \
+    omni_rog3-eng
+    
+    

@@ -20,39 +20,10 @@
 set -e
 
 # Required!
-DEVICE=rog2
-VENDOR=asus
+export DEVICE=rog3
+export DEVICE_COMMON=sm8250-common
+export VENDOR=asus
 
-INITIAL_COPYRIGHT_YEAR=2019
+export DEVICE_BRINGUP_YEAR=2020
 
-# Load extractutils and do some sanity checks
-MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
-
-CM_ROOT="$MY_DIR"/../../..
-
-HELPER="$CM_ROOT"/vendor/omni/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
-    exit 1
-fi
-. "$HELPER"
-
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
-
-# Copyright headers and guards
-write_headers "rog2"
-
-# The standard blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt
-
-write_makefiles "$MY_DIR"/proprietary-files-product.txt
-
-cat << EOF >> "$ANDROIDMK"
-
-EOF
-
-# We are done!
-write_footers
-
+"./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
