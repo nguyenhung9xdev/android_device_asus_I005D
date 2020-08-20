@@ -1,2 +1,6 @@
+# HALs
 /sys/class/leds/vibrator(/.*)? u:object_r:sysfs_vibrator:s0
 /system/bin/hw/android\.hardware\.vibrator@1\.2-service\.rog3 u:object_r:hal_vibrator_default_exec:s0
+
+# FOD
+/system_ext/bin/hw/omni\.biometrics\.fingerprint\.inscreen@1\.0-service\.asus_kona	u:object_r:hal_fod_asus_kona_exec:s0
