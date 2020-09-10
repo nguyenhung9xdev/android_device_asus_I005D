@@ -1,0 +1,1 @@
+genfscon proc /localHbm                u:object_r:asus_display_proc_exec:s0

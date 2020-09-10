@@ -4,6 +4,9 @@ hal_server_domain(hal_fod_asus_kona, hal_omni_fod)
 type hal_fod_asus_kona_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(hal_fod_asus_kona)
 
+# Allow hal_fod_asus_kona to read and write to asus_display_proc_exec
+allow hal_fod_asus_kona asus_display_proc_exec:file w_file_perms;
+
 # Allow access to the HALs
 hal_client_domain(hal_fod_asus_kona, hal_fingerprint)
 
