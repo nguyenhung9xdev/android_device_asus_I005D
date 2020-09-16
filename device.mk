@@ -48,10 +48,14 @@ PRODUCT_COPY_FILES += \
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/root,root)
+    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/root,recovery/root)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
