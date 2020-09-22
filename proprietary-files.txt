@@ -83,3 +83,9 @@ etc/videoeditor/Lively.mfim
 etc/videoeditor/Graceful.mfim
 etc/videoeditor/Happy.mfim
 etc/videoeditor/Dynamic.mfim
+
+# Display
+lib64/libDV.so
+
+# QTI Telephony
+-product/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
