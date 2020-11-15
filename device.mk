@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Vintf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vintf/manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest.xml
+
 # Inherit from asus sm8250-common
 $(call inherit-product, device/asus/sm8250-common/common.mk)
 
