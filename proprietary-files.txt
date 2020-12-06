@@ -15,10 +15,22 @@ etc/sysconfig/ims-hiddenapi-package-whitelist.xml
 priv-app/GameBroadcaster/lib/arm64/libJniModule.so
 -priv-app/ROGGameCenter/ROGGameCenter.apk;PRESIGNED
 
+# Audio
+etc/cdma_call_conf.xml
+lib/libadsprpc_system.so
+lib/libcdsprpc_system.so
+lib/libmdsprpc_system.so
+lib/libsdsprpc_system.so
+lib64/libadsprpc_system.so
+lib64/libcdsprpc_system.so
+lib64/libmdsprpc_system.so
+lib64/libsdsprpc_system.so
+
 # Camera
 lib64/DataSet/arch/DIT_List.cfg
 lib64/DataSet/ditSCidGen/msgchk.db
 lib64/DataSet/ispDB/ParameterDB.db
+lib64/libmpbase.so
 lib64/libxditk_DIT_MSMv1.so
 lib64/libxditk_DIT_Manager.so
 lib64/libxditk_ISP.so
@@ -85,7 +97,24 @@ etc/videoeditor/Happy.mfim
 etc/videoeditor/Dynamic.mfim
 
 # Display
+-priv-app/AsusVisualMaster/AsusVisualMaster.apk
+etc/permissions/com.qti.snapdragon.sdk.display.xml
+-product/app/colorservice/colorservice.apk
+product/lib64/vendor.display.color@1.0.so
+product/lib64/vendor.display.color@1.1.so
+product/lib64/vendor.display.color@1.2.so
+product/lib64/vendor.display.color@1.3.so
 lib64/libDV.so
+
+# Display api
+product/lib/libsdm-disp-apis.qti.so
+product/lib/vendor.qti.hardware.qdutils_disp@1.0.so
+product/lib64/libsdm-disp-apis.qti.so
+product/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # QTI Telephony
 -product/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
+
+# Power
+-framework/QPerformance.jar
+-framework/UxPerformance.jar
