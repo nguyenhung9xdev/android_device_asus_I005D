@@ -1,1 +1,2 @@
 genfscon proc /localHbm                u:object_r:asus_display_proc_exec:s0
+genfscon proc /driver/fod_event        u:object_r:asus_display_proc_exec:s0

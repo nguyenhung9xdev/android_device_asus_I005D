@@ -20,6 +20,9 @@
 #include "FingerprintInscreen.h"
 #include <hidl/HidlTransportSupport.h>
 
+#define FOD_EVENT_PATH "/proc/driver/fod_event"
+#define FOD_WAKEUP_EVENT "33"
+
 #define LOCAL_HBM_MODE "/proc/localHbm"
 #define LOCAL_HBM_ON "1"
 #define LOCAL_HBM_OFF "0"
@@ -47,6 +50,7 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 Return<void> FingerprintInscreen::onPress() {
     this->mGoodixFingerprintDaemon->sendCommand(200001, {},
                                                 [](int, const hidl_vec<signed char>&) {});
+    android::base::WriteStringToFile(FOD_WAKEUP_EVENT, FOD_EVENT_PATH);
     android::base::WriteStringToFile(LOCAL_HBM_ON, LOCAL_HBM_MODE);
     this->mGoodixFingerprintDaemon->sendCommand(200002, {},
                                                 [](int, const hidl_vec<signed char>&) {});
