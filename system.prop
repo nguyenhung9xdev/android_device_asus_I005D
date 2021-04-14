@@ -1,10 +1,3 @@
-# Asus build
-ro.vendor.build.asus.number=17.0823.2009.99-0
-ro.vendor.build.asus.sku=WW
-ro.vendor.build.asus.version=17.0823.2009.99
-ro.vendor.build.fota.version=WW_I003D-17.0823.2009.99-0
-ro.vendor.build.software.version=17_0823_2009_99
-
 #ASUS_BSP Add for Dirac sound effect feature
 ro.vendor.dirac.acs.controller=gef
 ro.vendor.dirac.acs.storeSettings=1
@@ -20,7 +13,7 @@ ro.vendor.dirac.acs.rotation=true
 ro.vendor.dirac.gef.system_sound=1
 ro.vendor.dirac.gef.ins.tid=0x10012D02
 ro.vendor.dirac.gef.ins.mid=0x10012DE2
-ro.vendor.dirac.gef.ins.did=0x313,0x2c4
+ro.vendor.dirac.gef.ins.did=0xF,0x313,0x2c4
 ro.vendor.dirac.gef.ins.appt=0x00011130,0x00011131,0x00011134
 ro.vendor.dirac.gef.ext.appt=0x00011130,0x00011131,0x00011134
 
@@ -70,8 +63,8 @@ vendor.camera.undistortion.video=4:0;1:0;2:0;3:0
 vendor.camera.capture.override_max_digital_zoom=4:8;1:8
 vendor.camera.cam4.stream_list=1P/2Y/1J
 vendor.camera.cam1.stream_list=1P/2Y/1J
-vendor.camera.cam4.exposure_time_range=100000,32000000000
-vendor.camera.cam1.exposure_time_range=100000,32000000000
+vendor.camera.cam4.exposure_time_range=312500,32000000000
+vendor.camera.cam1.exposure_time_range=312500,32000000000
 vendor.camera.cam2.exposure_time_range=100000,16000000000
 vendor.camera.cam3.exposure_time_range=100000,16000000000
 vendor.camera.cam0.eis.sup_list=4K@30,FHD@60,FHD@30,HD@30
