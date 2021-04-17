@@ -1,0 +1,109 @@
+# ASUS_BSP+++ Show_Cai
+service AThermalService /vendor/bin/init.asus.thermal_conf.sh
+        class core
+	seclabel u:r:thermal-engine:s0
+        user root
+        oneshot
+        disabled
+        
+service onFgAppChanged /system/vendor/bin/onFgAppChanged
+        class core
+        user root
+        oneshot
+        disabled
+        seclabel u:r:onFgAppChanged:s0
+# ASUS_BSP--- Show_Cai
+
+service AirTriggerTest /vendor/bin/hw/airtrigger_test
+        class core
+        user root
+        oneshot
+        disabled
+        seclabel u:r:hal_sensors_default:s0
+	
+# ASUS_BSP+++ Clay_Wang
+service GripCalService /vendor/bin/grip_cal.sh
+        class core
+        user root
+        oneshot
+        disabled
+# ASUS_BSP+++ Clay_Wang	
+
+# ASUS_BSP +++ Clay_Wang
+service GripCheckK /vendor/bin/grip_fpc_check.sh
+        class core
+	seclabel u:r:vendor_thermal-engine:s0
+        user root
+        oneshot
+	disabled
+# ASUS_BSP --- Clay_Wang
+
+# ASUS_BSP Clay_Wang dumpsys sensorservice 
+service SENSOR_DUMP /vendor/bin/ASUS_Sensor_dump.sh
+         user root
+         group root
+         disabled
+         oneshot
+         seclabel u:r:savelogmtp:s0
+
+# ASUS_BSP+++ Clay_Wang
+on post-fs-data
+	setprop vendor.thermal.create.thermal_link 1
+	setprop vendor.asus.thermalfan 1
+	start AThermalService
+	# BSP Clay_Wang "For SensorService Log"
+	mkdir /asdf/sensor
+    	restorecon_recursive /asdf/sensor
+    	chmod 0777 /asdf/sensor
+	chmod 777 /vendor/etc/ASUS_Sensor_dump.sh
+# ASUS_BSP--- Clay_Wang
+
+# ASUS_BSP+++ Clay_Wang "For external interface"
+on property:vendor.grip.checkfpc=*
+	start GripCheckK
+# ASUS_BSP--- Clay_Wang "For external interface"
+
+# ASUS_BSP+++ Clay_Wang
+on property:sys.boot_completed=1
+	setprop vendor.grip.checkfpc 1
+	setprop vendor.thermal.create.thermal_link 1
+	start AThermalService
+
+on property:debug.thermal_engine.reset=1
+	start AThermalService
+# ASUS_BSP--- Clay_Wang
+
+on property:debug.lmh=*
+   start AThermalService
+on property:vendor.thermal.lmh_freq1=*
+   setprop debug.thermal.lmh_freq1 ${vendor.thermal.lmh_freq1}
+on property:vendor.thermal.lmh_freq0=*
+   setprop debug.thermal.lmh_freq0 ${vendor.thermal.lmh_freq0}
+
+on property:vendor.thermal.dumpsys=1
+        start SENSOR_DUMP
+on property:vendor.thermal.dumpsys_sns=1
+        start AThermalService
+on property:persist.vendor.asus.startlog=*
+        setprop vendor.thermal.startlog ${persist.vendor.asus.startlog}
+on property:vendor.thermal.dumpsys_done=1
+        setprop sys.thermal.dumpsys 0
+# ASUS_BSP--- Clay_Wang "dumpsys sensorservice"
+
+# ASUS_BSPShow_Cai +++ For power key turn on screen and enable touch
+on property:sys.asus.psensor.enable_touch=1
+	write /sys/class/sensors/psensor/enable_touch 1
+	setprop sys.asus.psensor.enable_touch 0
+# ASUS_BSPShow_Cai --- For power key turn on screen and enable touch
+
+# ASUS_BSP+++ Clay_Wang "For Grip Calibration"
+on property:debug.grip.calibration=*
+	start GripCalService
+on property:debug.grip.cal_test_result=*
+	start GripCalibration
+# ASUS_BSP--- Clay_Wang "For Grip Calibration"
+
+on property:vendor.grip.fw.version=*
+	setprop vendor.airtrigger.fw.version ${vendor.grip.fw.version}
+on property:vendor.grip.fw.result=*
+	setprop	vendor.airtrigger.fw.result	${vendor.grip.fw.result}

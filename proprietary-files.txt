@@ -8,12 +8,18 @@ etc/hardcore_X2.json
 etc/hardcore_X3.json
 etc/x3_comb.json
 etc/permissions/asus.software.gamewidget.zenui.rog3.xml
+etc/permissions/asus.software.project.ZS661KS.xml
+etc/permissions/asus.software.rog.xml
+etc/permissions/asus.software.sku.WW.xml
+etc/permissions/asus.software.zenui.seven.xml
 etc/permissions/asus.software.zenui.rog.xml
 etc/permissions/asus.software.zenui.xml
 etc/sysconfig/ims-hiddenapi-package-whitelist.xml
 -priv-app/GameBroadcaster/GameBroadcaster.apk
 priv-app/GameBroadcaster/lib/arm64/libJniModule.so
--priv-app/ROGGameCenter/ROGGameCenter.apk
+-priv-app/ROGGameCenter/ROGGameCenter.apk|98E140CF6AD7807F021638DD331E8E8E9A7E7B9D
+-priv-app/ROGAirTrigger/ROGAirTrigger.apk
+priv-app/ROGAirTrigger/lib/arm64/libpl_droidsonroids_gif.so
 
 # Audio
 system_ext/etc/cdma_call_conf.xml
@@ -21,6 +27,15 @@ system_ext/lib64/libadsprpc_system.so
 system_ext/lib64/libcdsprpc_system.so
 system_ext/lib64/libmdsprpc_system.so
 system_ext/lib64/libsdsprpc_system.so
+
+# Battery
+etc/permissions/asus.software.marketapp.xml
+-app/MobileManagerService/MobileManagerService.apk
+-priv-app/MobileManager/MobileManager.apk
+priv-app/MobileManager/lib/arm64/libavast-utils.so
+priv-app/MobileManager/lib/arm64/libavast-vps-interface.so
+-priv-app/PowerSaving2/PowerSaving2.apk|70539A0F165BCFF9C81C7EFA6567102D224ED332
+priv-app/PowerSaving2/lib/arm64/libJniModule.so
 
 # Camera
 lib64/DataSet/arch/DIT_List.cfg

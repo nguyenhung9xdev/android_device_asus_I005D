@@ -52,7 +52,8 @@ PRODUCT_COPY_FILES += \
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/root,recovery/root)
+    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/root,recovery/root) \
+    $(call find-copy-subdir-files,*,device/asus/rog3/prebuilt/system_root,root)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
