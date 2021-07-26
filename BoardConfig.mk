@@ -28,6 +28,7 @@ DEVICE_PATH := device/asus/rog3
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/asus/rog3
 TARGET_KERNEL_CONFIG := vendor/rog3_defconfig
 
 # Properties
