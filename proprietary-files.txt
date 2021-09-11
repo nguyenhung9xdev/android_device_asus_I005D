@@ -58,6 +58,65 @@ lib64/libxditk_arch.so
 lib64/libxditk_ditArchLIB.so
 lib64/libxditk_ditBSP.so
 lib64/libxditk_ditBSP_JNI.so
+-priv-app/AsusCamera/AsusCamera.apk
+priv-app/AsusCamera/lib/arm64/libasus_camera_panorama.so
+priv-app/AsusCamera/lib/arm64/libyuv_camera.so
+priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_interval_capture.so
+priv-app/AsusCamera/lib/arm64/libbitmap.so
+priv-app/AsusCamera/lib/arm64/libmpbase.so
+priv-app/AsusCamera/lib/arm64/libtensorflowlite_jni.so
+priv-app/AsusCamera/lib/arm64/libasus_camera_selfiepano.so
+priv-app/AsusCamera/lib/arm64/libasus_camera_object_tracking.so
+priv-app/AsusCamera/lib/arm64/libasus_camera_interval_panorama.so
+priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_burstcapture.so
+priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_zf7.so
+priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_rog3.so
+priv-app/AsusCamera/lib/arm64/libyuv_util.so
+priv-app/AsusCamera/lib/arm64/libUndistort.so
+priv-app/AsusCamera/lib/arm64/libasusundistort.so
+priv-app/AsusCamera/lib/arm64/libarcsoft_object_tracking.so
+
+# Gallery
+-priv-app/AsusGallery/AsusGallery.apk
+priv-app/AsusGallery/lib/arm64/libmpbase.so
+priv-app/AsusGallery/lib/arm64/libjni_filter_show.so
+priv-app/AsusGallery/lib/arm64/libtensorflowlite_jni.so
+priv-app/AsusGallery/lib/arm64/libjni_face_effect.so
+priv-app/AsusGallery/lib/arm64/librs.vignette.so
+priv-app/AsusGallery/lib/arm64/libtensorflow_inference.so
+priv-app/AsusGallery/lib/arm64/librs.convolve3x3.so
+priv-app/AsusGallery/lib/arm64/libpanorenderer.so
+priv-app/AsusGallery/lib/arm64/libpano_video_renderer.so
+priv-app/AsusGallery/lib/arm64/librsjni_androidx.so
+priv-app/AsusGallery/lib/arm64/librsjni.so
+priv-app/AsusGallery/lib/arm64/libgif.so
+priv-app/AsusGallery/lib/arm64/librs.grey.so
+priv-app/AsusGallery/lib/arm64/libarcsoft_beautyshot.so
+priv-app/AsusGallery/lib/arm64/librs.saturation.so
+priv-app/AsusGallery/lib/arm64/libblur.so
+priv-app/AsusGallery/lib/arm64/librs.grad.so
+priv-app/AsusGallery/lib/arm64/librs.blur.so
+priv-app/AsusGallery/lib/arm64/libRSSupport.so
+priv-app/AsusGallery/lib/arm64/libjni_wide_angle_undistort.so
+priv-app/AsusGallery/lib/arm64/libNvStreamingSdkCore.so
+priv-app/AsusGallery/lib/arm64/libgvr.so
+priv-app/AsusGallery/lib/arm64/libjni_cvface_api.so
+priv-app/AsusGallery/lib/arm64/libcvface_api.so
+priv-app/AsusGallery/lib/arm64/libarcsoft_undistort.so
+priv-app/AsusGallery/lib/arm64/libopencv_java3.so
+
+# GalleryBurst
+-priv-app/AsusGalleryBurst/AsusGalleryBurst.apk
+priv-app/AsusGalleryBurst/lib/arm/libgifencoder.so
+
+# GalleryBurst Video Editor
+etc/videoeditor/Soothing.mfim
+etc/videoeditor/Charming.mfim
+etc/videoeditor/Energetic.mfim
+etc/videoeditor/Lively.mfim
+etc/videoeditor/Graceful.mfim
+etc/videoeditor/Happy.mfim
+etc/videoeditor/Dynamic.mfim
 
 # CNE
 -system_ext/framework/com.quicinc.cne.api-V1.0-java.jar
