@@ -42,7 +42,7 @@ $(call inherit-product, device/asus/rog3/device.mk)
 PRODUCT_DEVICE := rog3
 PRODUCT_NAME := omni_rog3
 PRODUCT_BRAND := asus
-PRODUCT_MODEL := ASUS_I003D
+PRODUCT_MODEL := ASUS_I003DD
 PRODUCT_MANUFACTURER := asus
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
