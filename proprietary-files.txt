@@ -6,21 +6,16 @@ system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 -app/FocusAppListener/FocusAppListener.apk
 -app/GameBroadcasterService/GameBroadcasterService.apk
 -app/HardwareStub/HardwareStub.apk
-etc/hardcore_default.json
-etc/hardcore_X1.json
-etc/hardcore_X2.json
-etc/hardcore_X3.json
-etc/x3_comb.json
-etc/permissions/asus.software.gamewidget.zenui.rog3.xml
-etc/permissions/asus.software.project.ZS661KS.xml
+etc/hardcore.zip
+etc/permissions/asus.software.gamewidget.zenui.rog5.xml
+etc/permissions/asus.software.project.ZS673KS.xml
 etc/permissions/asus.software.rog.xml
 etc/permissions/asus.software.sku.WW.xml
-etc/permissions/asus.software.zenui.seven.xml
+etc/permissions/asus.software.zenui.eight.xml
 etc/permissions/asus.software.zenui.rog.xml
 etc/permissions/asus.software.zenui.xml
 etc/sysconfig/ims-hiddenapi-package-whitelist.xml
 -priv-app/GameBroadcaster/GameBroadcaster.apk
-priv-app/GameBroadcaster/lib/arm64/libJniModule.so
 -priv-app/ROGGameCenter/ROGGameCenter.apk|98E140CF6AD7807F021638DD331E8E8E9A7E7B9D
 -priv-app/ROGAirTrigger/ROGAirTrigger.apk
 priv-app/ROGAirTrigger/lib/arm64/libpl_droidsonroids_gif.so
@@ -65,16 +60,17 @@ priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_interval_capture.so
 priv-app/AsusCamera/lib/arm64/libbitmap.so
 priv-app/AsusCamera/lib/arm64/libmpbase.so
 priv-app/AsusCamera/lib/arm64/libtensorflowlite_jni.so
-priv-app/AsusCamera/lib/arm64/libasus_camera_selfiepano.so
 priv-app/AsusCamera/lib/arm64/libasus_camera_object_tracking.so
 priv-app/AsusCamera/lib/arm64/libasus_camera_interval_panorama.so
 priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_burstcapture.so
-priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_zf7.so
-priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_rog3.so
+priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_rog5.so
 priv-app/AsusCamera/lib/arm64/libyuv_util.so
 priv-app/AsusCamera/lib/arm64/libUndistort.so
 priv-app/AsusCamera/lib/arm64/libasusundistort.so
 priv-app/AsusCamera/lib/arm64/libarcsoft_object_tracking.so
+priv-app/AsusCamera/lib/arm64/libscanner.so
+priv-app/AsusCamera/lib/arm64/libMNN.so
+priv-app/AsusCamera/lib/arm64/libmainstone.so
 
 # Gallery
 -priv-app/AsusGallery/AsusGallery.apk

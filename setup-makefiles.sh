@@ -20,7 +20,7 @@
 set -e
 
 # Required!
-DEVICE=rog3
+DEVICE=I005D
 VENDOR=asus
 
 INITIAL_COPYRIGHT_YEAR=2020
@@ -42,7 +42,7 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 # Copyright headers and guards
-write_headers "rog3"
+write_headers "I005D"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
