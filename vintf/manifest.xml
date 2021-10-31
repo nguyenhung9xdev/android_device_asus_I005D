@@ -1,13 +1,11 @@
 <!--
     Input:
-        manifest.xml
-        manifest_zs661ks.xml
-        manifest.xml
-        manifest.xml
+        manifest_lahaina.xml
+        netutil.xml
+        glovemode.xml
         zenmotion.xml
-        colortemp.xml
 -->
-<manifest version="2.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -29,14 +27,14 @@
         <fqname>@6.0::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.authsecret</name>
+        <name>android.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.1</version>
         <interface>
-            <name>IAuthSecret</name>
+            <name>IBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IAuthSecret/default</fqname>
+        <fqname>@2.1::IBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -69,16 +67,6 @@
         <fqname>@2.4::ICameraProvider/legacy/0</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.configstore</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>ISurfaceFlingerConfigs</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
         <fqname>@1.3::ICryptoFactory/wfdhdcp</fqname>
@@ -95,20 +83,9 @@
         <fqname>@1.0::IGatekeeper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IGnss</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IGnss/gnss_vendor</fqname>
-        <fqname>@1.1::IGnss/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <fqname>@4.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.1::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -178,12 +155,12 @@
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
-        <version>2.2</version>
+        <version>2.3</version>
         <interface>
             <name>ISoundTriggerHw</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.2::ISoundTriggerHw/default</fqname>
+        <fqname>@2.3::ISoundTriggerHw/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -256,16 +233,6 @@
         <fqname>@2.2::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.asus.bspcam</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAsusBspCameraInterface</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAsusBspCameraInterface/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.asus.hardware.vibratorcontrol</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -274,6 +241,26 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IVibratorcontrol/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.asus.wifi.hostapd</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAsusHostapd</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IAsusHostapd/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.asus.wifi.netutil</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IWifiNetUtil</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IWifiNetUtil/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.goodix.hardware.biometrics.fingerprint</name>
@@ -296,14 +283,14 @@
         <fqname>@1.2::IAirTrigger/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.ims.colortemp</name>
+        <name>vendor.ims.asusgeneralhidl</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IColorTemp</name>
+            <name>IAsusGeneralHIDLE</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IColorTemp/default</fqname>
+        <fqname>@1.0::IAsusGeneralHIDLE/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.ims.glovemode</name>
@@ -314,16 +301,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IGloveMode/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.ims.twinviewdock</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITwinViewDock</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITwinViewDock/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.ims.wifiantennamode</name>
@@ -366,16 +343,6 @@
         <fqname>@1.0::INxpNfcLegacy/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.pixelworks.hardware.display</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IIris</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IIris/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -396,26 +363,6 @@
         <fqname>@1.1::IEsePowerManager/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>ILocHidlGnss</name>
-            <instance>gnss_vendor</instance>
-        </interface>
-        <fqname>@1.2::ILocHidlGnss/gnss_vendor</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>ILocHidlGnss</name>
-            <instance>gnss_vendor</instance>
-        </interface>
-        <fqname>@2.1::ILocHidlGnss/gnss_vendor</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -424,16 +371,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IAlarm/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.audiohalext</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAudioHalExt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAudioHalExt/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.auralight</name>
@@ -458,22 +395,22 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_sar</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IBluetoothSar</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IBluetoothSar/default</fqname>
+        <fqname>@1.1::IBluetoothSar/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.btconfigstore</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>IBTConfigStore</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IBTConfigStore/default</fqname>
+        <fqname>@2.0::IBTConfigStore/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.cacert</name>
@@ -550,6 +487,16 @@
         <fqname>@1.0::IDspService/dspservice</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.eid</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEid</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IEid/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.factory</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -592,12 +539,12 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>2.2</version>
         <interface>
             <name>IPerf</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IPerf/default</fqname>
+        <fqname>@2.2::IPerf/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qccvndhal</name>
@@ -608,6 +555,16 @@
             <instance>qccvndhal</instance>
         </interface>
         <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qconfig</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQConfig</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IQConfig/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
@@ -671,14 +628,14 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
             <instance>UimLpa1</instance>
         </interface>
-        <fqname>@1.0::IUimLpa/UimLpa0</fqname>
-        <fqname>@1.0::IUimLpa/UimLpa1</fqname>
+        <fqname>@1.1::IUimLpa/UimLpa0</fqname>
+        <fqname>@1.1::IUimLpa/UimLpa1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -753,6 +710,26 @@
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.secdisplay</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecdisplay</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISecdisplay/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.secureprocessor.device</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureProcessor</name>
+            <instance>qti-tee</instance>
+        </interface>
+        <fqname>@1.0::ISecureProcessor/qti-tee</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.sensorscalibrate</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -761,16 +738,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISensorsCalibrate/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.slmadapter</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISlmAdapter</name>
-            <instance>SlmAdapter</instance>
-        </interface>
-        <fqname>@1.0::ISlmAdapter/SlmAdapter</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
@@ -789,13 +756,17 @@
         <interface>
             <name>ITrustedInput</name>
             <instance>default</instance>
+            <instance>qtee-vm</instance>
         </interface>
         <interface>
             <name>ITrustedUI</name>
             <instance>default</instance>
+            <instance>qtee-vm</instance>
         </interface>
         <fqname>@1.0::ITrustedInput/default</fqname>
+        <fqname>@1.0::ITrustedInput/qtee-vm</fqname>
         <fqname>@1.0::ITrustedUI/default</fqname>
+        <fqname>@1.0::ITrustedUI/qtee-vm</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
@@ -810,12 +781,12 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.vpp</name>
         <transport>hwbinder</transport>
-        <version>1.3</version>
+        <version>2.0</version>
         <interface>
             <name>IHidlVppService</name>
             <instance>vppService</instance>
         </interface>
-        <fqname>@1.3::IHidlVppService/vppService</fqname>
+        <fqname>@2.0::IHidlVppService/vppService</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
@@ -865,12 +836,12 @@
     <hal format="hidl">
         <name>vendor.qti.ims.factory</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IImsFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IImsFactory/default</fqname>
+        <fqname>@1.1::IImsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
@@ -905,4 +876,5 @@
     <sepolicy>
         <version>30.0</version>
     </sepolicy>
+    <kernel target-level="5"/>
 </manifest>

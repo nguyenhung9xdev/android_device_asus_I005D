@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.vibrator@1.2-service.rog3",
+    name: "android.hardware.vibrator@1.2-service.I005D",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.vibrator@1.2-service.rog3.rc"],
-    vintf_fragments: ["android.hardware.vibrator@1.2-service.rog3.xml"],
+    init_rc: ["android.hardware.vibrator@1.2-service.I005D"],
+    vintf_fragments: ["android.hardware.vibrator@1.2-service.I005D.xml"],
     srcs: ["service.cpp", "Vibrator.cpp"],
     cflags: [
         "-Wall",

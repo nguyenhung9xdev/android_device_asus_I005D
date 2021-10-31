@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=rog3
+DEVICE=I005D
 VENDOR=asus
 
 # Load extractutils and do some sanity checks

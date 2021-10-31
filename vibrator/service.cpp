@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "vibrator@1.2-rog3"
+#define LOG_TAG "vibrator@1.2-I005D"
 
 #include <android/hardware/vibrator/1.2/IVibrator.h>
 #include <android-base/logging.h>
